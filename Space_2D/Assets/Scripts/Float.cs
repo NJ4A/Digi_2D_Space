@@ -14,7 +14,7 @@ public class Float : MonoBehaviour
 
 
     // double the spin speed when true
-    private bool fastSpin = false;
+    //private bool fastSpin = false;
 
 
     // Update is called once per frame
