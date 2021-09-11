@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; background-image: url(&apos;/Assets/GUI/title_screen.png&apos;); -unity-background-scale-mode: stretch-to-fill; align-items: flex-end; justify-content: space-between; flex-direction: row-reverse; flex-shrink: 1;">
+        <ui:VisualElement style="height: 199px; width: 395px; justify-content: center; align-items: center; -unity-text-align: middle-center; -unity-font-style: bold; font-size: 20px;">
+            <ui:Button text="Start" display-tooltip-when-elided="true" enable-rich-text="false" style="margin-top: 5px; margin-bottom: 5px; background-image: url(&apos;/Assets/GUI/istockphoto-157639696-612x612.jpg&apos;); height: 28px; width: 115px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px;" />
+            <ui:Button text="Quit" display-tooltip-when-elided="true" style="height: 23px; width: 115px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; background-image: url(&apos;/Assets/GUI/istockphoto-157639696-612x612.jpg&apos;); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; font-size: 20px; -unity-font-style: bold; margin-left: 0; margin-right: 0; margin-top: 5px; margin-bottom: 5px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="height: 41px; width: 487px; justify-content: flex-end; align-items: stretch;">
+            <ui:Label text="Indienomicon Space Jam 2021" display-tooltip-when-elided="true" style="align-items: auto; height: 39px; width: 506px; justify-content: flex-start; -unity-text-align: lower-left; -unity-font-style: bold; font-size: 20px; color: rgb(132, 62, 135);" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
