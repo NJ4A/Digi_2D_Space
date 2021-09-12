@@ -15,7 +15,6 @@ public class PullForce : MonoBehaviour
     RaycastHit2D hit;
     public bool doesplayerStartOnMe;
     private PlayerLocomotion loco;
-    private bool iSwitchedPlanets;
 
     void Start()
     {
@@ -47,7 +46,7 @@ public class PullForce : MonoBehaviour
         if (!doesplayerStartOnMe)
         {
             intensity = .001f;
-            influenceRange = 4f;
+            influenceRange = 2f;
             distanceToPlayer = Vector2.Distance(Targetplayer.position, transform.position);
             if (distanceToPlayer <= influenceRange)
             {
@@ -81,17 +80,18 @@ public class PullForce : MonoBehaviour
                 if (!ManagerClass.didPlayerSwitchPlanet)
                 {
                     Targetplayer.localPosition = Vector2.Lerp(Targetplayer.localPosition, hit.point, 1 * Time.deltaTime);
-                    PlayerLocomotion player = Targetplayer.GetComponent<PlayerLocomotion>();
+                    PlayerLocomotion player = Targetplayer.GetComponent<PlayerLocomotion>(); 
                     player.ResetJump();
                 }
 
                 else
                 {
-                    startLerping = false;
-                    Targetplayer.localRotation = Quaternion.identity;
-                    Targetplayer.localRotation = Quaternion.Euler(0, 0, 90);
+                    //Targetplayer.localRotation = Quaternion.identity;
+                    //Targetplayer.localRotation = Quaternion.Euler(0, 0, 90);
                     loco.jumpSpeed = 2;
                     doesplayerStartOnMe = DoIHaveRat();
+                    startLerping = false;
+                   
                 }
             }
 
@@ -106,10 +106,6 @@ public class PullForce : MonoBehaviour
             ManagerClass.didPlayerSwitchPlanet = true;
         }
     }
-
-
-
-
 
     public bool DoIHaveRat() 
     {

@@ -11,8 +11,10 @@ public class PlayerLocomotion : MonoBehaviour
     public float startJumpTime;
     private bool isJumping = false;
     private bool isGoingBack = false;
-    public WorldLocomotion currentWorld;
+    private WorldLocomotion currentWorld;
     private bool doIneedToRotate;
+    private LineRenderer lr;
+    private bool flipMe = false;
    
     void Start()
     {
@@ -25,6 +27,12 @@ public class PlayerLocomotion : MonoBehaviour
         {
             Debug.Log("got it");
         }
+        lr = GetComponent<LineRenderer>();
+        lr.material = new Material(Shader.Find("Particles/Additive"));
+        lr.endColor = Color.white;
+        lr.startColor = Color.red;
+        lr.startWidth = .2f;
+        lr.positionCount = 2;
     }
 
     void SetBool(ref bool _bool) 
@@ -81,11 +89,41 @@ public class PlayerLocomotion : MonoBehaviour
 
         }
 
-
         if (ManagerClass.didPlayerSwitchPlanet != doIneedToRotate)
         {
             SetBool(ref ManagerClass.didPlayerSwitchPlanet);
+            transform.localRotation = Quaternion.identity;
+            transform.localRotation = Quaternion.Euler(0, 0, 90);
         }
+
+        AdjustPlayer();
+
+    }
+
+    void AdjustPlayer()
+    {
+            Vector3 origin = transform.position;
+            Vector3 direction = transform.TransformDirection(Vector3.down);
+            Vector3 endPoint = origin + direction * 100000;
+            RaycastHit2D hit = Physics2D.Raycast(origin, direction);
+
+            //DEBUG
+            lr.SetPosition(0, origin);
+
+            if (hit)
+            {
+            endPoint = hit.point;
+            if (hit.transform.tag == "Planet")
+                {
+                    endPoint = hit.point;
+                }
+            }
+            else
+            {
+                transform.Rotate(Vector3.forward * Time.deltaTime);
+            }
+
+            lr.SetPosition(1, endPoint);
     }
 
 
