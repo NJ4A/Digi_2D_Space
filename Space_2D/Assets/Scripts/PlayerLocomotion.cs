@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerLocomotion : MonoBehaviour
 {
@@ -14,8 +15,12 @@ public class PlayerLocomotion : MonoBehaviour
     private WorldLocomotion currentWorld;
     private bool doIneedToRotate;
     private LineRenderer lr;
+    public UI readyToPlay;
+    private Animator anim;
+
     void Start()
     {
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         jumpTimeUp = startJumpTime;
         jumpTimeDown = startJumpTime;
@@ -41,62 +46,76 @@ public class PlayerLocomotion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isJumping)
+        anim.SetInteger("ItemsCollected", (int)ManagerClass.itemsCollected);
+
+        if (readyToPlay.countdownEnded == true)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (!isJumping)
             {
-                isJumping = true;
-                currentWorld.StopRotation = true;
-            }
-        }
-        else
-        {
-            if (jumpTimeUp <= 0 && !isGoingBack)
-            {
-                isGoingBack = true;
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    isJumping = true;
+                    currentWorld.StopRotation = true;
+                }
             }
             else
             {
-                jumpTimeUp -= Time.deltaTime;
-
-                if (isJumping)
+                if (jumpTimeUp <= 0 && !isGoingBack)
                 {
-                    applyVelocityWithDirection(transform, false);
-                }
-            }
-
-
-            if (isGoingBack)
-            {
-                if (jumpTimeDown <= 0)
-                {
-                    ResetJump();
-                    
-                    if (ManagerClass.updateSpeed)
-                    {
-                        ManagerClass.updateSpeed = false;
-                        jumpSpeed++;
-                    }
+                    isGoingBack = true;
                 }
                 else
                 {
-                    jumpTimeDown -= Time.deltaTime;
-                    applyVelocityWithDirection(transform, true);
+                    jumpTimeUp -= Time.deltaTime;
+
+                    if (isJumping)
+                    {
+                        applyVelocityWithDirection(transform, false);
+                    }
                 }
+
+
+                if (isGoingBack)
+                {
+                    if (jumpTimeDown <= 0)
+                    {
+                        ResetJump();
+                    
+                        if (ManagerClass.updateSpeed)
+                        {
+                            ManagerClass.updateSpeed = false;
+                            jumpSpeed++;
+                        }
+                    }
+                    else
+                    {
+                        jumpTimeDown -= Time.deltaTime;
+                        applyVelocityWithDirection(transform, true);
+                    }
+                }
+
             }
 
+            if (ManagerClass.didPlayerSwitchPlanet != doIneedToRotate)
+            {
+                SetBool(ref ManagerClass.didPlayerSwitchPlanet);
+                //transform.localRotation = Quaternion.identity;
+                //transform.localRotation = Quaternion.Euler(0, 0, 90);
+            }
+            transform.Rotate(Vector3.forward * (80 * Time.deltaTime));
         }
 
-        if (ManagerClass.didPlayerSwitchPlanet != doIneedToRotate)
-        {
-            SetBool(ref ManagerClass.didPlayerSwitchPlanet);
-            //transform.localRotation = Quaternion.identity;
-            //transform.localRotation = Quaternion.Euler(0, 0, 90);
-        }
-
+        
         // AdjustPlayer();
-        transform.Rotate(Vector3.forward * (80 * Time.deltaTime));
+    }
 
+    private void FixedUpdate()
+    {
+        if (ManagerClass.itemsCollected == 22)
+        {
+            ManagerClass.Score = readyToPlay.time.text;
+            SceneManager.LoadScene("CreditsScreen");
+        }
     }
 
     void AdjustPlayer()
