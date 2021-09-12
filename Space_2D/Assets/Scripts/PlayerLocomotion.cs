@@ -17,9 +17,11 @@ public class PlayerLocomotion : MonoBehaviour
     private LineRenderer lr;
     public UI readyToPlay;
     private Animator anim;
+    private AudioSource boing;
 
     void Start()
     {
+        boing = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         jumpTimeUp = startJumpTime;
@@ -56,6 +58,7 @@ public class PlayerLocomotion : MonoBehaviour
                 {
                     isJumping = true;
                     currentWorld.StopRotation = true;
+                    boing.Play();
                 }
             }
             else
