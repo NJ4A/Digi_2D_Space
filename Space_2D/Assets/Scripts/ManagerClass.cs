@@ -4,6 +4,7 @@ using UnityEngine;
 
 public static class ManagerClass 
 {
-    public static float JumpSpeed = 0;
+    public static bool updateSpeed = false;
     public static float itemsCollected = 0;
+    public static bool didPlayerSwitchPlanet = false;
 }

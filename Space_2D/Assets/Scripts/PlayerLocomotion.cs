@@ -12,18 +12,24 @@ public class PlayerLocomotion : MonoBehaviour
     private bool isJumping = false;
     private bool isGoingBack = false;
     public WorldLocomotion currentWorld;
-    private float PrevJumpSpeed;
+    private bool doIneedToRotate;
    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         jumpTimeUp = startJumpTime;
         jumpTimeDown = startJumpTime;
+        SetBool(ref ManagerClass.didPlayerSwitchPlanet);
         currentWorld = GetComponentInParent<WorldLocomotion>();
         if (currentWorld != null)
         {
             Debug.Log("got it");
         }
+    }
+
+    void SetBool(ref bool _bool) 
+    {
+        doIneedToRotate = _bool;
     }
 
     // Update is called once per frame
@@ -59,6 +65,12 @@ public class PlayerLocomotion : MonoBehaviour
                 if (jumpTimeDown <= 0)
                 {
                     ResetJump();
+                    
+                    if (ManagerClass.updateSpeed)
+                    {
+                        ManagerClass.updateSpeed = false;
+                        jumpSpeed++;
+                    }
                 }
                 else
                 {
@@ -68,7 +80,14 @@ public class PlayerLocomotion : MonoBehaviour
             }
 
         }
+
+
+        if (ManagerClass.didPlayerSwitchPlanet != doIneedToRotate)
+        {
+            SetBool(ref ManagerClass.didPlayerSwitchPlanet);
+        }
     }
+
 
     public void ResetJump() 
     {
@@ -78,7 +97,6 @@ public class PlayerLocomotion : MonoBehaviour
         isJumping = false;
         isGoingBack = false;
         currentWorld.StopRotation = false;
-        //jumpSpeed += ManagerClass.JumpSpeed;
     }
 
     public void applyVelocityWithDirection(Transform direction, bool isNeg) 

@@ -8,7 +8,7 @@ public class CollectionItem : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            ManagerClass.JumpSpeed++;
+            ManagerClass.updateSpeed = true;
             ManagerClass.itemsCollected++;
             Destroy(gameObject);
         }
