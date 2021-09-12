@@ -114,7 +114,7 @@ public class PlayerLocomotion : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (ManagerClass.itemsCollected == 22)
+        if (ManagerClass.itemsCollected > 44)
         {
             ManagerClass.Score = readyToPlay.time.text;
             SceneManager.LoadScene("CreditsScreen");
