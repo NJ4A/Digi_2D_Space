@@ -14,8 +14,6 @@ public class PlayerLocomotion : MonoBehaviour
     private WorldLocomotion currentWorld;
     private bool doIneedToRotate;
     private LineRenderer lr;
-    private bool flipMe = false;
-   
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -92,11 +90,12 @@ public class PlayerLocomotion : MonoBehaviour
         if (ManagerClass.didPlayerSwitchPlanet != doIneedToRotate)
         {
             SetBool(ref ManagerClass.didPlayerSwitchPlanet);
-            transform.localRotation = Quaternion.identity;
-            transform.localRotation = Quaternion.Euler(0, 0, 90);
+            //transform.localRotation = Quaternion.identity;
+            //transform.localRotation = Quaternion.Euler(0, 0, 90);
         }
 
-        AdjustPlayer();
+        // AdjustPlayer();
+        transform.Rotate(Vector3.forward * (80 * Time.deltaTime));
 
     }
 
@@ -108,7 +107,7 @@ public class PlayerLocomotion : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(origin, direction);
 
             //DEBUG
-            lr.SetPosition(0, origin);
+            //lr.SetPosition(0, origin);
 
             if (hit)
             {
@@ -123,7 +122,7 @@ public class PlayerLocomotion : MonoBehaviour
                 transform.Rotate(Vector3.forward * Time.deltaTime);
             }
 
-            lr.SetPosition(1, endPoint);
+            //lr.SetPosition(1, endPoint);
     }
 
 

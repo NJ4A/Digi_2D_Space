@@ -88,7 +88,7 @@ public class PullForce : MonoBehaviour
                 {
                     //Targetplayer.localRotation = Quaternion.identity;
                     //Targetplayer.localRotation = Quaternion.Euler(0, 0, 90);
-                    loco.jumpSpeed = 2;
+                    //loco.jumpSpeed = 2;
                     doesplayerStartOnMe = DoIHaveRat();
                     startLerping = false;
                    
