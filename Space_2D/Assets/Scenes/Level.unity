@@ -226,6 +226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 241128019}
   - component: {fileID: 241128018}
+  - component: {fileID: 241128020}
   m_Layer: 0
   m_Name: popcorn (1)
   m_TagString: Untagged
@@ -299,6 +300,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &241128020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241128017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 730fa0c1d3f2bc14d8aef5a4a0a05959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wiggleSpeed: 3
+  wiggleDistance: 1
 --- !u!1001 &328449184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -445,8 +460,8 @@ Canvas:
   m_GameObject: {fileID: 339444944}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1837778537}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -467,6 +482,7 @@ GameObject:
   m_Component:
   - component: {fileID: 453020805}
   - component: {fileID: 453020804}
+  - component: {fileID: 453020806}
   m_Layer: 0
   m_Name: chicken (2)
   m_TagString: Untagged
@@ -540,6 +556,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &453020806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453020803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 730fa0c1d3f2bc14d8aef5a4a0a05959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wiggleSpeed: 3
+  wiggleDistance: 1
 --- !u!1 &467475134
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,6 +629,7 @@ GameObject:
   m_Component:
   - component: {fileID: 475763589}
   - component: {fileID: 475763588}
+  - component: {fileID: 475763590}
   m_Layer: 0
   m_Name: popcorn (2)
   m_TagString: Untagged
@@ -672,6 +703,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &475763590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475763587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 730fa0c1d3f2bc14d8aef5a4a0a05959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wiggleSpeed: 3
+  wiggleDistance: 1
 --- !u!1 &485132631
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,6 +727,7 @@ GameObject:
   m_Component:
   - component: {fileID: 485132633}
   - component: {fileID: 485132632}
+  - component: {fileID: 485132634}
   m_Layer: 0
   m_Name: pizza (1)
   m_TagString: Untagged
@@ -755,6 +801,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &485132634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485132631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 730fa0c1d3f2bc14d8aef5a4a0a05959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wiggleSpeed: 3
+  wiggleDistance: 1
 --- !u!1 &567948518
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,6 +825,7 @@ GameObject:
   m_Component:
   - component: {fileID: 567948520}
   - component: {fileID: 567948519}
+  - component: {fileID: 567948521}
   m_Layer: 0
   m_Name: popcorn
   m_TagString: Untagged
@@ -838,6 +899,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &567948521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567948518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 730fa0c1d3f2bc14d8aef5a4a0a05959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wiggleSpeed: 3
+  wiggleDistance: 1
 --- !u!1 &618512374
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,6 +923,7 @@ GameObject:
   m_Component:
   - component: {fileID: 618512376}
   - component: {fileID: 618512375}
+  - component: {fileID: 618512377}
   m_Layer: 0
   m_Name: fries
   m_TagString: Untagged
@@ -921,72 +997,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &642983402
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 642983405}
-  - component: {fileID: 642983404}
-  - component: {fileID: 642983403}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &642983403
+--- !u!114 &618512377
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 642983402}
+  m_GameObject: {fileID: 618512374}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Script: {fileID: 11500000, guid: 730fa0c1d3f2bc14d8aef5a4a0a05959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &642983404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 642983402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!4 &642983405
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 642983402}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 31
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  wiggleSpeed: 3
+  wiggleDistance: 1
 --- !u!1001 &648817069
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1075,6 +1099,7 @@ GameObject:
   m_Component:
   - component: {fileID: 698189390}
   - component: {fileID: 698189389}
+  - component: {fileID: 698189391}
   m_Layer: 0
   m_Name: burger (2)
   m_TagString: Untagged
@@ -1148,6 +1173,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &698189391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698189388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 730fa0c1d3f2bc14d8aef5a4a0a05959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wiggleSpeed: 3
+  wiggleDistance: 1
 --- !u!1001 &738681735
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1335,6 +1374,7 @@ GameObject:
   m_Component:
   - component: {fileID: 819339368}
   - component: {fileID: 819339367}
+  - component: {fileID: 819339369}
   m_Layer: 0
   m_Name: hotdog (2)
   m_TagString: Untagged
@@ -1500,6 +1540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1065555866}
   - component: {fileID: 1065555865}
+  - component: {fileID: 1065555867}
   m_Layer: 0
   m_Name: chicken
   m_TagString: Untagged
@@ -1573,6 +1614,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1065555867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065555864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 730fa0c1d3f2bc14d8aef5a4a0a05959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wiggleSpeed: 3
+  wiggleDistance: 1
 --- !u!1 &1269393508
 GameObject:
   m_ObjectHideFlags: 0
@@ -1583,6 +1638,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1269393510}
   - component: {fileID: 1269393509}
+  - component: {fileID: 1269393511}
   m_Layer: 0
   m_Name: fries (1)
   m_TagString: Untagged
@@ -1656,6 +1712,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1269393511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269393508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 730fa0c1d3f2bc14d8aef5a4a0a05959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wiggleSpeed: 3
+  wiggleDistance: 1
 --- !u!1 &1303428151
 GameObject:
   m_ObjectHideFlags: 0
@@ -1832,7 +1902,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\n\nCast and Crew \n\nMichael Bianchini\nDeborah Corbett\nRonald Hyatt\nAlex
-    Viera"
+    Viera\nRuby McDonald\nShawn De La Cruz"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2058,6 +2128,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1517590138}
   - component: {fileID: 1517590137}
+  - component: {fileID: 1517590139}
   m_Layer: 0
   m_Name: pizza (2)
   m_TagString: Untagged
@@ -2131,6 +2202,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1517590139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517590136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 730fa0c1d3f2bc14d8aef5a4a0a05959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wiggleSpeed: 3
+  wiggleDistance: 1
 --- !u!1 &1556090764
 GameObject:
   m_ObjectHideFlags: 0
@@ -2141,6 +2226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1556090766}
   - component: {fileID: 1556090765}
+  - component: {fileID: 1556090767}
   m_Layer: 0
   m_Name: hotdog (1)
   m_TagString: Untagged
@@ -2214,6 +2300,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1556090767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556090764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 730fa0c1d3f2bc14d8aef5a4a0a05959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wiggleSpeed: 3
+  wiggleDistance: 1
 --- !u!1 &1560762717
 GameObject:
   m_ObjectHideFlags: 0
@@ -2224,6 +2324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1560762719}
   - component: {fileID: 1560762718}
+  - component: {fileID: 1560762720}
   m_Layer: 0
   m_Name: burger
   m_TagString: Untagged
@@ -2297,6 +2398,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1560762720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560762717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 730fa0c1d3f2bc14d8aef5a4a0a05959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wiggleSpeed: 3
+  wiggleDistance: 1
 --- !u!1 &1631684690
 GameObject:
   m_ObjectHideFlags: 0
@@ -2356,6 +2471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1634588214}
   - component: {fileID: 1634588213}
+  - component: {fileID: 1634588215}
   m_Layer: 0
   m_Name: fries (2)
   m_TagString: Untagged
@@ -2429,6 +2545,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1634588215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634588212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 730fa0c1d3f2bc14d8aef5a4a0a05959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wiggleSpeed: 3
+  wiggleDistance: 1
 --- !u!1 &1664958989
 GameObject:
   m_ObjectHideFlags: 0
@@ -2862,6 +2992,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1947193578}
   - component: {fileID: 1947193577}
+  - component: {fileID: 1947193579}
   m_Layer: 0
   m_Name: pizza
   m_TagString: Untagged
@@ -2935,6 +3066,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1947193579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947193576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 730fa0c1d3f2bc14d8aef5a4a0a05959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wiggleSpeed: 3
+  wiggleDistance: 1
 --- !u!1 &2000186204
 GameObject:
   m_ObjectHideFlags: 0
@@ -2945,6 +3090,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2000186206}
   - component: {fileID: 2000186205}
+  - component: {fileID: 2000186207}
   m_Layer: 0
   m_Name: chicken (1)
   m_TagString: Untagged
@@ -3018,6 +3164,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2000186207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000186204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 730fa0c1d3f2bc14d8aef5a4a0a05959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wiggleSpeed: 3
+  wiggleDistance: 1
 --- !u!1 &2004945077
 GameObject:
   m_ObjectHideFlags: 0
@@ -3028,6 +3188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2004945079}
   - component: {fileID: 2004945078}
+  - component: {fileID: 2004945080}
   m_Layer: 0
   m_Name: hotdog
   m_TagString: Untagged
@@ -3101,6 +3262,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2004945080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004945077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 730fa0c1d3f2bc14d8aef5a4a0a05959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wiggleSpeed: 3
+  wiggleDistance: 1
 --- !u!1001 &2005494248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3169,6 +3344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2069162789}
   - component: {fileID: 2069162788}
+  - component: {fileID: 2069162790}
   m_Layer: 0
   m_Name: burger (1)
   m_TagString: Untagged
@@ -3242,6 +3418,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2069162790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069162787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 730fa0c1d3f2bc14d8aef5a4a0a05959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wiggleSpeed: 3
+  wiggleDistance: 1
 --- !u!1 &2134078907
 GameObject:
   m_ObjectHideFlags: 0
